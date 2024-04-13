@@ -91,10 +91,7 @@ public class Manager {
 
             // System.out.println("Cell "+currentCell.cell+ "\t"+bestPlant+"\tPrice="+bestPrice);
             
-            currentCell.plant = new Plant(bestPlant);
-
-            
-
+            currentCell.placePlant(new Plant(bestPlant));
 
         }
 
