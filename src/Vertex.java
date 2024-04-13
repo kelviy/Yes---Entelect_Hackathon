@@ -11,7 +11,6 @@ public class Vertex
     public Plant plant = null;
 
     private double sunlight, water;
-    private Plant plant;
 
     public Vertex(String nm)
     {
@@ -46,7 +45,4 @@ public class Vertex
         sunlight = sunlightLevel;
     }
 
-    public void setPlant(Plant plant){
-        this.plant = plant;
-    }
 }
