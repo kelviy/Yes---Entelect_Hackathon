@@ -45,8 +45,6 @@ public class Vertex
         sunlight = sunlightLevel;
     }
 
-<<<<<<< HEAD
-=======
     /**
      * calculates the overall sunlight in the radius. Includes hexagons as long as they are in the circle
      * @param diameter
@@ -94,5 +92,4 @@ public class Vertex
         }
         return sum/total;
     }
->>>>>>> 8771770ade9ca50137bc6124da30c4ca26b2bc65
 }

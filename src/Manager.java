@@ -68,7 +68,6 @@ public class Manager {
         }
     }
 
-<<<<<<< HEAD
     /**
      * This method add a plant to each cell hopefully in a smart way
      */
@@ -83,7 +82,7 @@ public class Manager {
             // find best plant for cell conditions
             for (int j = 0; j < 10; j++) {
                 Plant plant = allPlants.get(j);
-                if(plant.getPrice(currentCell.getSunlight(), currentCell.getWater())>bestPrice){
+                if(plant.getPrice(currentCell.calcSunlight(plant.diameter), currentCell.calcWater(plant.diameter))>bestPrice){
                     bestPlant = plant.name;
                     bestPrice = plant.getPrice(currentCell.getSunlight(), currentCell.getWater());
                 }
@@ -94,6 +93,8 @@ public class Manager {
             
             currentCell.plant = new Plant(bestPlant);
 
+            
+
 
         }
 
@@ -103,6 +104,4 @@ public class Manager {
     public void initializeList() {
 
     }
-=======
->>>>>>> 8771770ade9ca50137bc6124da30c4ca26b2bc65
 }
