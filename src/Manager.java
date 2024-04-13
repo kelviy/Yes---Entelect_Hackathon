@@ -68,7 +68,6 @@ public class Manager {
         }
     }
 
-<<<<<<< HEAD
     /**
      * This method add a plant to each cell hopefully in a smart way
      */
