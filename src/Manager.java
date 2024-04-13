@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.sql.Array;
 
 public class Manager {
-    public Graph garden = new Graph();
+    public static Graph garden = new Graph();
     public ArrayList<Plant> allPlants = new ArrayList<>();
 
     public ArrayList<Plant> bestPlants = new ArrayList<>();
