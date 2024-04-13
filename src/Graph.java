@@ -3,7 +3,7 @@ import java.util.*;
 public class Graph
 {
     public static final double INFINITY = Double.MAX_VALUE;
-    private HashMap<String,Vertex> vertexMap = new HashMap<String,Vertex>();
+    public HashMap<String,Vertex> vertexMap = new HashMap<String,Vertex>();
 
     /**
      * Breath First Search to find the shortest distance
