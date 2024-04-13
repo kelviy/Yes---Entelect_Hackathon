@@ -5,6 +5,38 @@ public class Graph
     public static final double INFINITY = Double.MAX_VALUE;
     private HashMap<String,Vertex> vertexMap = new HashMap<String,Vertex>();
 
+    /**
+     * Breath First Search to find the shortest distance
+     * @param startName name of the start vertex
+     */
+    public void unweighted( String startName )
+    {
+        clearAll( );
+
+        Vertex start = vertexMap.get( startName );
+        if( start == null )
+            throw new NoSuchElementException( "Start vertex not found" );
+
+        Queue<Vertex> q = new LinkedList<Vertex>( );
+        q.add( start ); start.dist = 0;
+
+        while( !q.isEmpty( ) )
+        {
+            Vertex v = q.remove( );
+
+            for( Edge e : v.adj )
+            {
+                Vertex w = e.dest;
+                if( w.dist == INFINITY )
+                {
+                    w.dist = v.dist + 1;
+                    w.prev = v;
+                    q.add( w );
+                }
+            }
+        }
+    }
+
     public void addEdge(String sourcename, String destName)
     {
         Vertex v = getVertex(sourcename);
