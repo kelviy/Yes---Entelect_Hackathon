@@ -9,12 +9,14 @@ public class Vertex
     public int scratch;
 
     private double sunlight, water;
+    private Plant plant;
 
     public Vertex(String nm)
     {
         cell = nm;
         adj = new LinkedList<Edge>();
         reset();
+        plant = null;
         sunlight = 100;
         water=0;
     }
@@ -40,5 +42,9 @@ public class Vertex
 
     public void setSunlight(double sunlightLevel){
         sunlight = sunlightLevel;
+    }
+
+    public void setPlant(Plant plant){
+        this.plant = plant;
     }
 }

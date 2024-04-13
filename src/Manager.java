@@ -1,4 +1,5 @@
 import java.io.*;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.sql.Array;
 
@@ -45,6 +46,31 @@ public class Manager {
         IOException e) {
             System.err.println(e.getMessage());
         }
+    }
+
+    /**
+     * This method add a plant to each cell hopefully in a smart way
+     */
+    public String plantsEverywhere(){
+        String result = "";
+        ArrayList<Plant> plants = new ArrayList<>();
+        for (int i = 0; i < 10; i++) {
+            // ArrayList.add(new Plant(Plant.BASIL));
+        }
+
+        for (int i = 0; i < 10; i++) {
+            Vertex currentCell = garden.getVertex(i+"");
+            
+            // for (int j = 0; j < 10; j++) {
+            //     Plant plant = 
+            // }
+            
+            
+
+
+        }
+
+        return result;
     }
 
     public void initializeList() {
