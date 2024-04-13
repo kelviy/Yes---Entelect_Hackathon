@@ -4,9 +4,11 @@ import java.sql.Array;
 
 public class Manager {
     public HashMap<String, Plant> listPlants = new HashMap<>();
+    Graph garden = new Graph();
 
-    public Manager() {
 
+    public Manager(String dataFile) {
+        loadData(dataFile, garden);
     }
 
     // Template Code for reading in text file
