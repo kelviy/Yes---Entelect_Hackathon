@@ -41,4 +41,14 @@ public class Vertex
     public void setSunlight(double sunlightLevel){
         sunlight = sunlightLevel;
     }
+
+    /**
+     * calculates the overall sunlight in the radius. Includes hexagons as long as they are in the circle
+     * @param radius
+     * @return the overall percentage of sunlight in the radius
+     */
+    public double calcSunlight(double diameter) {
+        double radius = diameter / 2;
+        int distance = (int)Math.ceil(radius / 2);
+    }
 }
