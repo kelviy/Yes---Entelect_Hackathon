@@ -8,6 +8,8 @@ public class Vertex
     public Vertex prev;
     public int scratch;
 
+    public Plant plant = null;
+
     private double sunlight, water;
 
     public Vertex(String nm)
