@@ -1,4 +1,5 @@
 import java.io.*;
+import java.sql.Array;
 
 public class Manager {
 
@@ -7,23 +8,37 @@ public class Manager {
     }
 
     // Template Code for reading in text file
-    public void loadData(String textFile) {
+    public void loadData(String textFile, Graph garden) {
         try {
             BufferedReader ff = new BufferedReader(new FileReader(textFile));
 
             // reads next line then splits the lines and add item
             String line;
 
-            while((line = ff.readLine()) != null) {
-                String[] parts = line.split("\t");
+            while ((line = ff.readLine()) != null) {
+                if (line.equals("}")) {
+                    ff.readLine();
+                    while ((line = ff.readLine()) != null) {
+                        if (!line.equals("}")) {
+                            // line = ff.readLine();
+                            String[] parts = line.split(":");
+                            String nameString = parts[0].trim().substring(1, parts[0].trim().length() - 1);
+                            String adjacent = parts[1].trim().substring(parts[1].trim().indexOf('[', 0) + 1,
+                                    parts[1].trim().indexOf(']', 0));
+                            String[] adjacentcyList = adjacent.split(",");
+                            for (String cell : adjacentcyList) {
+                                garden.addEdge(nameString, cell);
+                            }
+                        }
 
-                String term = parts[0];
-                String sentence = parts[1];
-                double score = Double.parseDouble(parts[2]);
+                    }
+                }
 
             }
 
-        } catch(IOException e) {
+        } catch (
+
+        IOException e) {
             System.err.println(e.getMessage());
         }
     }
