@@ -5,11 +5,11 @@ public class Graph
     public static final double INFINITY = Double.MAX_VALUE;
     private HashMap<String,Vertex> vertexMap = new HashMap<String,Vertex>();
 
-    public void addEdge(String sourcename, String destName,double cost)
+    public void addEdge(String sourcename, String destName)
     {
         Vertex v = getVertex(sourcename);
         Vertex w = getVertex(destName);
-        v.adj.add(new Edge(w,cost));
+        v.adj.add(new Edge(w,1));
     }
 
     public void dijkstra(String startName)
