@@ -89,7 +89,7 @@ public class Manager {
                 // System.out.println("Cell "+currentCell.cell+ "\t"+plant.name+"\tPrice="+plant.getPrice(currentCell.getSunlight(), currentCell.getWater()));
             }
 
-            System.out.println("Cell "+currentCell.cell+ "\t"+bestPlant+"\tPrice="+bestPrice);
+            // System.out.println("Cell "+currentCell.cell+ "\t"+bestPlant+"\tPrice="+bestPrice);
             
             currentCell.plant = new Plant(bestPlant);
 
