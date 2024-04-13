@@ -30,7 +30,9 @@ public class Sprinkler {
         return false;
     }
 
-    public double percentageCalc()
+    public double percentageCalc() {
+        return 0;
+    }
 
 
 }
