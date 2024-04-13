@@ -92,4 +92,19 @@ public class Vertex
         }
         return sum/total;
     }
+
+    public void placePlant(Plant plant) {
+        this.plant = plant;
+        double radius = this.plant.diameter / 2;
+        double distance = (int)Math.ceil(radius / 2);
+
+        Manager.garden.unweighted(cell);
+
+        for (int i = 0; i < Manager.garden.vertexMap.size(); i++) {
+            double cellDist = Manager.garden.vertexMap.get(String.valueOf(i)).dist;
+            if (cellDist <= distance) {
+                Manager.garden.vertexMap.get(String.valueOf(i)).sunlight = 0;
+            }
+        }
+    }
 }

@@ -82,7 +82,7 @@ public class Manager {
             // find best plant for cell conditions
             for (int j = 0; j < 10; j++) {
                 Plant plant = allPlants.get(j);
-                if(plant.getPrice(currentCell.getSunlight(), currentCell.getWater())>bestPrice){
+                if(plant.getPrice(currentCell.calcSunlight(plant.diameter), currentCell.calcWater(plant.diameter))>bestPrice){
                     bestPlant = plant.name;
                     bestPrice = plant.getPrice(currentCell.getSunlight(), currentCell.getWater());
                 }
@@ -91,8 +91,7 @@ public class Manager {
 
             // System.out.println("Cell "+currentCell.cell+ "\t"+bestPlant+"\tPrice="+bestPrice);
             
-            currentCell.plant = new Plant(bestPlant);
-
+            currentCell.placePlant(new Plant(bestPlant));
 
         }
 
