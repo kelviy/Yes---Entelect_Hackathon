@@ -4,8 +4,8 @@ import java.util.HashMap;
 import java.sql.Array;
 
 public class Manager {
-    public HashMap<String, Plant> listPlants = new HashMap<>();
     public Graph garden = new Graph();
+    public ArrayList<Plant> allPlants = new ArrayList<>();
 
     public ArrayList<Plant> bestPlants = new ArrayList<>();
     public ArrayList<Sprinkler> bestSprinklers = new ArrayList<>();
@@ -13,6 +13,22 @@ public class Manager {
 
     public Manager(String dataFile) {
         loadData(dataFile, garden);
+        loadPlants();
+    }
+
+    //Method to load List of plants
+    private void loadPlants()
+    {
+        allPlants.add(new Plant(Plant.BASIL));
+        allPlants.add(new Plant(Plant.ROSEMARY));
+        allPlants.add(new Plant(Plant.MINT));
+        allPlants.add(new Plant(Plant.LAVENDER));
+        allPlants.add(new Plant(Plant.CILANTRO));
+        allPlants.add(new Plant(Plant.GINSENG));
+        allPlants.add(new Plant(Plant.ANGELICA));
+        allPlants.add(new Plant(Plant.PATCHOULI));
+        allPlants.add(new Plant(Plant.VALERIAN));
+        allPlants.add(new Plant(Plant.RUE));
     }
 
     // Template Code for reading in text file
