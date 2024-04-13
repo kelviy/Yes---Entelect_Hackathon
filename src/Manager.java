@@ -103,6 +103,4 @@ public class Manager {
     public void initializeList() {
 
     }
-=======
->>>>>>> 8771770ade9ca50137bc6124da30c4ca26b2bc65
 }
