@@ -50,8 +50,4 @@ public class Manager {
             System.err.println(e.getMessage());
         }
     }
-
-    public void initializeList() {
-
-    }
 }
