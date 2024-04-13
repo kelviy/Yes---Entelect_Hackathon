@@ -75,8 +75,9 @@ public class Manager {
         String result = "";
         String bestPlant = "";
         double bestPrice = 0;
-        for (int i = 0; i < 2; i++) {
-            Vertex currentCell = garden.getVertex(i+"");
+        for (Vertex currentCell : garden.vertexMap.values()) {
+            
+            
             
             // find best plant for cell conditions
             for (int j = 0; j < 10; j++) {
@@ -90,7 +91,7 @@ public class Manager {
 
             System.out.println("Cell "+currentCell.cell+ "\t"+bestPlant+"\tPrice="+bestPrice);
             
-            
+            currentCell.plant = new Plant(bestPlant);
 
 
         }
