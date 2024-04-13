@@ -4,6 +4,7 @@ public class Plant
     public String name;
     public double diameter;
     public int selling_price;
+    public Vertex location;
     Condition poor;
     Condition fair;
     Condition excellent;

@@ -1,10 +1,14 @@
 import java.io.*;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.sql.Array;
 
 public class Manager {
     public HashMap<String, Plant> listPlants = new HashMap<>();
-    Graph garden = new Graph();
+    public Graph garden = new Graph();
+
+    public ArrayList<Plant> bestPlants = new ArrayList<>();
+    public ArrayList<Sprinkler> bestSprinklers = new ArrayList<>();
 
 
     public Manager(String dataFile) {
