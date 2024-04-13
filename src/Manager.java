@@ -14,6 +14,7 @@ public class Manager {
     public Manager(String dataFile) {
         loadData(dataFile, garden);
         loadPlants();
+        plantsEverywhere();
     }
 
     //Method to load List of plants
@@ -72,17 +73,22 @@ public class Manager {
      */
     public String plantsEverywhere(){
         String result = "";
-        ArrayList<Plant> plants = new ArrayList<>();
-        for (int i = 0; i < 10; i++) {
-            // ArrayList.add(new Plant(Plant.BASIL));
-        }
-
-        for (int i = 0; i < 10; i++) {
+        String bestPlant = "";
+        double bestPrice = 0;
+        for (int i = 0; i < 2; i++) {
             Vertex currentCell = garden.getVertex(i+"");
             
-            // for (int j = 0; j < 10; j++) {
-            //     Plant plant = 
-            // }
+            // find best plant for cell conditions
+            for (int j = 0; j < 10; j++) {
+                Plant plant = allPlants.get(j);
+                if(plant.getPrice(currentCell.getSunlight(), currentCell.getWater())>bestPrice){
+                    bestPlant = plant.name;
+                    bestPrice = plant.getPrice(currentCell.getSunlight(), currentCell.getWater());
+                }
+                // System.out.println("Cell "+currentCell.cell+ "\t"+plant.name+"\tPrice="+plant.getPrice(currentCell.getSunlight(), currentCell.getWater()));
+            }
+
+            System.out.println("Cell "+currentCell.cell+ "\t"+bestPlant+"\tPrice="+bestPrice);
             
             
 
