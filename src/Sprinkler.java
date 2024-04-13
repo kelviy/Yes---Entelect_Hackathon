@@ -25,7 +25,7 @@ public class Sprinkler {
         Edge toVertex3 = new Edge(index3, 1);
 
         if (index1.adj.contains(toVertex2) && index1.adj.contains(toVertex3)) {
-
+            return true;
         }
         return false;
     }
