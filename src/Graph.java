@@ -39,6 +39,8 @@ public class Graph
 
     public void addEdge(String sourcename, String destName)
     {
+        sourcename = sourcename.replaceAll(" ","");
+        destName = destName.replaceAll(" ","");
         Vertex v = getVertex(sourcename);
         Vertex w = getVertex(destName);
         v.adj.add(new Edge(w,1));
