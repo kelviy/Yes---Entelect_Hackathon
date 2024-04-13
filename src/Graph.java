@@ -75,8 +75,8 @@ public class Graph
     {
         if(dest.prev == null)
         {
-            return dest.name;
+            return dest.cell;
         }
-           return printPath(dest.prev) + " " + dest.name;
+           return printPath(dest.prev) + " " + dest.cell;
     }
 }
