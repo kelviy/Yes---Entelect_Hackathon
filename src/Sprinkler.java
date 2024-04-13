@@ -27,5 +27,6 @@ public class Sprinkler {
         if (index1.adj.contains(toVertex2) && index1.adj.contains(toVertex3)) {
 
         }
+        return false;
     }
 }

@@ -1,6 +1,8 @@
 import java.io.*;
+import java.util.HashMap;
 
 public class Manager {
+    public HashMap<String, Plant> listPlants = new HashMap<>();
 
     public Manager() {
 
@@ -26,5 +28,9 @@ public class Manager {
         } catch(IOException e) {
             System.err.println(e.getMessage());
         }
+    }
+
+    public void initializeList() {
+
     }
 }
