@@ -68,6 +68,7 @@ public class Manager {
         }
     }
 
+<<<<<<< HEAD
     /**
      * This method add a plant to each cell hopefully in a smart way
      */
@@ -102,4 +103,6 @@ public class Manager {
     public void initializeList() {
 
     }
+=======
+>>>>>>> 8771770ade9ca50137bc6124da30c4ca26b2bc65
 }
