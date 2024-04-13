@@ -27,7 +27,7 @@ public class Plant
     public static final String RUE = "Rue";
 
 
-    public Plant(String name, double diameter, int selling_price, Condition poor, Condition fair, Condition excellent)
+    public Plant(String name)
     {
         initialize(name);
     }

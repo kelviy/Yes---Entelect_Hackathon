@@ -1,7 +1,7 @@
 public class Main {
 
-    ///asdf/asdf/asdf/asdf
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        Plant p = new Plant(Plant.CILANTRO);
+
     }
 }
